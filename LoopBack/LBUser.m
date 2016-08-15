@@ -161,6 +161,7 @@ static NSString * const DEFAULTS_CURRENT_USER_ID_KEY = @"LBUserRepositoryCurrent
 - (void)saveCurrentUserId {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:_currentUserId forKey:DEFAULTS_CURRENT_USER_ID_KEY];
+    [defaults synchronize];
 }
 
 @end
