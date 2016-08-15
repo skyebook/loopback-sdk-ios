@@ -144,7 +144,8 @@ static NSString * const DEFAULTS_CURRENT_USER_ID_KEY = @"LBUserRepositoryCurrent
 }
 
 - (void)setCurrentUserId:(NSString *)currentUserId {
-    _currentUserId = currentUserId;
+    NSString *stringValueOfCurrentUserId = [NSString stringWithFormat:@"%@", currentUserId];
+    _currentUserId = stringValueOfCurrentUserId;
     self.cachedCurrentUser = nil;
     [self saveCurrentUserId];
 }
