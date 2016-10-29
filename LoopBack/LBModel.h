@@ -26,7 +26,7 @@
  * @return      The value associated with `key`, or `nil` if no value is
  *              associated with `key`.
  */
-- (id)objectForKeyedSubscript:(id <NSCopying>)key;
+- (id)objectForKeyedSubscript:(NSString *)key;
 
 /**
  * Adds a given key-value pair to the dictionary.
@@ -45,7 +45,7 @@
  *             NSInvalidArgumentException if aKey is nil. If aKey already exists
  *             in the dictionary anObject takes its place.
  */
-- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key;
+- (void)setObject:(id)obj forKeyedSubscript:(NSString *)key;
 
 /**
  * Converts the LBModel (and all of its \@properties) into an NSDictionary.
